@@ -1,7 +1,6 @@
 //Console's Light Code extension
 //дополнение Лёгкого кода от Console
 
-//Code Below
 #ifndef Consoles_LightCPP
 #define Consoles_LightCPP
 
@@ -13,8 +12,10 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
+#include <random>
 
 using string = std::string;
+inline constexpr int end = 0;
 
 inline void print(auto val) {
     std::cout << val << std::endl;
@@ -29,10 +30,10 @@ inline string input(string prompt = "") {
     return inputed;
 }
 namespace math {
-    struct Init { Init() { std::srand(time(0)); } };
-    static Init init;
     inline int random(int min, int max) {
-        return min + (std::rand() % (max - min + 1));
+    static std::mt19937 engine(std::random_device{}()); // создаем машину прямо тут
+    std::uniform_int_distribution<int> dist(min, max);
+    return dist(engine);
     }
 }
 #endif
