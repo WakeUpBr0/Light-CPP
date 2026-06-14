@@ -1,5 +1,5 @@
 # Light C++
-A Light-weight C++ library for fast coding
+A Light-weight C++ library for fast coding  
 Begginer friendly!  
 Light-Weight!  
 Simple!
