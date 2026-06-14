@@ -1,8 +1,6 @@
-//Console's Light Code extension
-//дополнение Лёгкого кода от Console
+//Console's Light С++ extension
 
-#ifndef Console_LightCPP
-#define Console_LightCPP
+#pragma once
 
 #include <iostream>
 #include <cstdlib>
@@ -13,6 +11,11 @@
 #include <algorithm>
 #include <cmath>
 #include <random>
+#include <clocale>
+static int init_locale = [](){
+    setlocale(LC_ALL, ".UTF-8");
+    return 0;
+}();
 
 #ifndef LIGHTCPP_NO_SHORT_NAMES
 using string = std::string;
@@ -20,7 +23,7 @@ using string = std::string;
 
 template <typename... Val>
 inline void print(Val... val) {
-    std::cout << ... << val << "\n";
+    (std::cout << ... << val) << "\n";
 }
 inline void write(auto val) {
     std::cout << val;
@@ -38,4 +41,3 @@ namespace math {
     return dist(engine, std::uniform_int_distribution<int>::param_type{min, max});
     }
 }
-#endif
