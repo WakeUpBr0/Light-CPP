@@ -1,14 +1,14 @@
 # Light C++
 A Light-weight C++ library for fast coding  
-Inspired by Lua
+Inspired by Lua  
+![CPP](https://img.shields.io/badge/%D0%A1%2B%2B%20Version-20%2B-blue?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 ## Why Light C++?
 * Beginner friendly: Simple start.
 * Light-Weight: small weight.
 * Simple: Simple API, LUA inspired.
 
-![CPP](https://img.shields.io/badge/%D0%A1%2B%2B%20Version-20%2B-blue?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 ## API
 
 `print(Any arguments)`  
