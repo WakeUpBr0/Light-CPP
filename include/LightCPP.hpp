@@ -17,7 +17,7 @@ static int init_locale = [](){
     return 0;
 }();
 
-#ifndef LIGHTCPP_NO_SHORT_NAMES
+#ifndef LIGHTCPP_NO_ALIASES
 using string = std::string;
 #endif
 
